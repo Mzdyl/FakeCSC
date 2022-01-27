@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">XposedTemplate</string>
-    <string name="xposedDescription">XposedTemplate</string>
+    <string name="app_name">FakeCSC</string>
+    <string name="xposedDescription">将三星应用商店地区修改为美区</string>
 </resources>
