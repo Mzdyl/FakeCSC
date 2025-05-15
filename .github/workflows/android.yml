@@ -26,6 +26,6 @@ jobs:
       run: ./gradlew build
       
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@4
+      uses: actions/upload-artifact@3
       with:
         path: app/build/outputs/apk/debug/app-debug.apk
