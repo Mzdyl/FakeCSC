@@ -22,11 +22,11 @@ public class XposedMod implements IXposedHookLoadPackage {
                 super.afterHookedMethod(param);
                 String key = (String) param.args[0];
                 if (key.equals("ro.csc.sales_code")) {
-                    param.setResult("USA");
+                    param.setResult("CHINA");
                 } else if (key.equals("ro.csc.country_code")) {
-                    param.setResult("US");
+                    param.setResult("CN");
                 } else if (key.equals("ro.csc.countryiso_code")) {
-                    param.setResult("XAA");
+                    param.setResult("CHC");
                 }
             }
         });
@@ -35,23 +35,23 @@ public class XposedMod implements IXposedHookLoadPackage {
                 new XC_MethodReplacement() {
                     @Override
                     protected Object replaceHookedMethod(MethodHookParam methodHookParam) throws Throwable {
-                        return "310030";
+                        return "46000";
                     }
                 });
         findAndHookMethod("android.telephony.TelephonyManager", lpparam.classLoader, "getSimCountryIso",
                 new XC_MethodReplacement() {
                     @Override
                     protected Object replaceHookedMethod(MethodHookParam methodHookParam) throws Throwable {
-                        return "us";
+                        return "cn";
                     }
                 });
         findAndHookMethod("android.telephony.TelephonyManager", lpparam.classLoader, "getSimOperatorName",
                 new XC_MethodReplacement() {
                     @Override
                     protected Object replaceHookedMethod(MethodHookParam methodHookParam) throws Throwable {
-                        return "Centennial";
+                        return "中国移动";
                     }
                 });
-        XposedHelpers.setStaticObjectField(Build.class, "MODEL", "SM-G998N");
+        XposedHelpers.setStaticObjectField(Build.class, "MODEL", "SM-S9380");
     }
 }
