@@ -2,5 +2,6 @@
 <resources>
     <string-array name="xposed_scope">
         <item>com.sec.android.app.samsungapps</item>
+        <item>com.samsung.android.mdecservice</item>
     </string-array>
 </resources>
